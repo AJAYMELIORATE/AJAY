@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("ENTER THE ARRAY ELEMENT SIZE :");
+    scanf("%d",&n);
+    int a[n];
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int target;
+    printf("ENTER THE TARGET ELEMENT VALUE ");
+    scanf("%d",&target);
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i]+a[j]==target)
+            {
+                printf("pairs found (%d %d)\n",a[i],a[j]);
+            }
+        }
+    }
+}
+
+
+
+
+ENTER THE ARRAY ELEMENT SIZE :6
+8
+7
+2
+5
+3
+1
+2
+ENTER THE TARGET ELEMENT VALUE 10
+pairs found (8 2)
+pairs found (8 2)
+pairs found (7 3)
